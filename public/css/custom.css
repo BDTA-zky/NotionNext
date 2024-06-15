@@ -10,7 +10,7 @@
 
 /*设置鼠标样式*/
 body {
-    cursor: url(public/css/normal.cur),
+    cursor: url(public/css/normal.png),
         default;
 }
 a,img {
