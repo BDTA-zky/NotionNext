@@ -9,13 +9,13 @@
 
 
 /*设置鼠标样式*/
-body {
+* {
     cursor: url(public/css/normal.png),
-        default;
+        auto;
 }
 a,img {
     cursor: url(https://jsd.cdn.zzko.cn/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
-        default;
+        auto;
 }
 
 
