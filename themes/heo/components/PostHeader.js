@@ -24,16 +24,27 @@ export default function PostHeader({ post, siteInfo }) {
                     height: 100%;
                     top: 0;
                     left: 0;
-                    box-shadow: 110px -130px 300px 60px #0060e0 inset;
-                }
-            `}</style>
+                    box-shadow: 110px -130px 500px 100px ${isDarkMode ? '#0000006b' : '#000'} inset;
+                    }
+                `}</style>
 
-            <div style={{ backdropFilter: 'blur(15px)' }} className={'bg-[#0060e0] absolute top-0 w-full h-full py-10 flex justify-center items-center'}>
-
-                {/* 文章背景图 */}
-                <div id='post-cover-wrapper' style={{ filter: 'blur(15px)' }} className='coverdiv lg:translate-x-96 opacity-50 lg:rotate-12'>
-                    <LazyImage id='post-cover' className='w-full h-full object-cover opacity-80 max-h-[50rem] min-w-[50vw] min-h-[20rem]' src={headerImage} />
-                </div>
+                    <div
+                    className={`${
+                        isDarkMode ? 'bg-transparent' : 'bg-transparent'
+                    } absolute top-0 w-full h-full py-10 flex justify-center items-center`}
+                    >
+                    {/* 文章背景图 */}
+                    <div
+                    id="post-cover-wrapper"
+                    className="coverdiv absolute top-0 w-full h-full py-10 flex justify-center items-center"
+                    style={{ filter: 'blur(5px)', opacity: '0.5' }}
+                    >
+                    <LazyImage
+                        id="post-cover"
+                        className="w-full h-full object-cover max-h-[50rem] min-w-[50vw] min-h-[20rem]"
+                        src={headerImage}
+                    />
+                    </div>
 
                 {/* 文章文字描述 */}
                 <div id='post-info' className='absolute top-48 z-10 flex flex-col space-y-4 lg:-mt-12 w-full max-w-[86rem] px-5'>
