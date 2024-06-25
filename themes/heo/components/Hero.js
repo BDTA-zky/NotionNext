@@ -320,76 +320,70 @@ function TodayCard({ cRef, siteInfo }) {
     }
   })
 
- 
   /**
-   * 查看更多
+   * 点击更多
    * @param {*} e
    */
-  function handleClickShowMore(e) {
+  function handleClickMore(e) {
     e.stopPropagation()
     setIsCoverUp(false)
   }
-
 
   /**
    * 点击卡片跳转的链接
    * @param {*} e
    */
   function handleCardClick(e) {
-    router.push(link)
+    router.push(siteConfig('HEO_HERO_TITLE_LINK', null, CONFIG))
   }
 
   return (
     <div
-      id='today-card'
+      id="today-card"
       className={`${
         isCoverUp ? ' ' : 'pointer-events-none'
-      } overflow-hidden absolute hidden xl:flex flex-1 flex-col h-full top-0 w-full`}>
+      } overflow-hidden absolute hidden xl:flex flex-1 flex-col h-full top-0 w-full`}
+    >
       <div
-        id='card-body'
+        id="card-body"
         onClick={handleCardClick}
         className={`${
           isCoverUp
             ? 'opacity-100 cursor-pointer'
             : 'opacity-0 transform scale-110 pointer-events-none'
-        } shadow transition-all duration-200 today-card h-full bg-black rounded-xl relative overflow-hidden flex items-end`}>
-        {/* 卡片文字信息 */}
+        } shadow transition-all duration-200 today-card h-full bg-[#0E57D5] rounded-xl relative overflow-hidden flex items-end`}
+      >
         <div
-          id='today-card-info'
-          className='flex justify-between w-full relative text-white p-10 items-end'>
-          <div className='flex flex-col'>
-            <div className='text-xs font-light'>
-              {siteConfig('HEO_HERO_TITLE_4', null, CONFIG)}
-            </div>
-            <div className='text-3xl font-bold'>
-              {siteConfig('HEO_HERO_TITLE_5', null, CONFIG)}
-            </div>
+          id="today-card-info"
+          className="z-10 flex justify-between w-full relative text-white p-10 items-end"
+        >
+          <div className="flex flex-col">
+            <div className="text-xs font-light">{siteConfig('HEO_HERO_TITLE_4', null, CONFIG)}</div>
+            <div className="text-3xl font-bold">{siteConfig('HEO_HERO_TITLE_5', null, CONFIG)}</div>
           </div>
-          {/* 查看更多的按钮 */}
           <div
-            onClick={handleClickShowMore}
-            className={`'${isCoverUp ? '' : 'hidden pointer-events-none'} z-10 group flex items-center px-3 h-10 justify-center  rounded-3xl
-            glassmorphism transition-colors duration-100 `}>
+            onClick={handleClickMore}
+            className={`'${
+              isCoverUp ? '' : 'hidden pointer-events-none '
+            } flex items-center px-3 h-10 justify-center bg-[#425aef] hover:bg-[#4259efcb] transition-colors duration-100 rounded-3xl`}
+          >
             <PlusSmall
-              className={
-                'group-hover:rotate-180 duration-500 transition-all w-6 h-6 mr-2 bg-white rounded-full stroke-black'
-              }
+              className={'w-6 h-6 mr-2 bg-white rounded-full stroke-indigo-400'}
             />
-            <div id='more' className='select-none'>
-              {locale.COMMON.MORE}
+            <div id="more" className="select-none">
+              更多推荐
             </div>
           </div>
         </div>
-
-        {/* 封面图 */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={siteInfo?.pageCover}
-          id='today-card-cover'
+        <div
+          id="today-card-cover"
           className={`${
             isCoverUp ? '' : ' pointer-events-none'
-          } hover:scale-110 duration-1000 object-cover cursor-pointer today-card-cover absolute w-full h-full top-0`}
-        />
+          } cursor-pointer today-card-cover absolute w-full h-full top-0`}
+          style={{
+            background: `url('${siteInfo?.pageCover}') no-repeat center /cover`
+          }}
+        ></div>
       </div>
     </div>
   )
