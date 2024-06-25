@@ -24,20 +24,20 @@ export default function PostHeader({ post, siteInfo }) {
                     height: 100%;
                     top: 0;
                     left: 0;
-                    box-shadow: 110px -130px 300px 60px #0060e0 inset;
+                    box-shadow: 110px -130px 300px 60px #e0000000  inset;
                 }
             `}</style>
 
-            <div style={{ backdropFilter: 'blur(15px)' }} className={'bg-[#0060e0] absolute top-0 w-full h-full py-10 flex justify-center items-center'}>
-
+                <div style={{ backdropFilter: 'blur(15px)' }} className={'bg-[#0060e0] absolute top-0 w-full h-full py-10 flex justify-center items-center'}>
                 {/* 文章背景图 */}
-                <div id='post-cover-wrapper' style={{ filter: 'blur(2px)' }} className='coverdiv opacity-50'>
-                <LazyImage 
-                    id='post-cover' 
-                    className='w-full h-full object-cover opacity-80 max-h-[50rem] min-w-[50vw] min-h-[35rem]' 
+                <div id='post-cover-wrapper' style={{ filter: 'blur(2px)' }} className='coverdiv opacity-50 relative'> 
+                    <LazyImage
+                    id='post-cover'
+                    className='w-full h-full object-cover opacity-80 absolute top-0 left-0' 
                     src={headerImage} 
-                />
+                    />
                 </div>
+
 
 
                 {/* 文章文字描述 */}
