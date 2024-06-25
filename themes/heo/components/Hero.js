@@ -320,14 +320,16 @@ function TodayCard({ cRef, siteInfo }) {
     }
   })
 
+ 
   /**
-   * 点击更多
+   * 查看更多
    * @param {*} e
    */
-  function handleClickMore(e) {
+  function handleClickShowMore(e) {
     e.stopPropagation()
     setIsCoverUp(false)
   }
+
 
   /**
    * 点击卡片跳转的链接
