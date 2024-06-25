@@ -46,7 +46,7 @@ export default function PostHeader({ post, siteInfo, isDarkMode }) {
         <div
           id="post-cover-wrapper"
           className="coverdiv absolute top-0 w-full h-full py-10 flex justify-center items-center"
-          style={{ filter: 'blur(5px)', opacity: '0.8' }}
+          style={{ filter: 'blur(5px)', opacity: '0.5' }}
         >
           <LazyImage
             id="post-cover"
