@@ -148,7 +148,7 @@ const BLOG = {
     process.env.NEXT_PUBLIC_CUSTOM_RIGHT_CLICK_CONTEXT_MENU_THEME_TAG || true, // 是否显示标签
 
   // 自定义外部脚本，外部样式
-  CUSTOM_EXTERNAL_JS: [''], // e.g. ['http://xx.com/script.js','http://xx.com/script.js']
+  CUSTOM_EXTERNAL_JS: ['https://cdn.bootcss.com/pace/1.0.2/pace.min.js','https://jsd.cdn.zzko.cn/gh/instantpage/instant.page@5.1.1/instantpage.js'], // e.g. ['http://xx.com/script.js','http://xx.com/script.js']
   CUSTOM_EXTERNAL_CSS: [''], // e.g. ['http://xx.com/style.css','http://xx.com/style.css']
 
   // 侧栏布局 是否反转(左变右,右变左) 已支持主题: hexo next medium fukasawa example
@@ -241,7 +241,7 @@ const BLOG = {
 
   //   ********动态特效相关********
   // 鼠标点击烟花特效
-  FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || false, // 开关
+  FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || true, // 开关
   // 烟花色彩，感谢 https://github.com/Vixcity 提交的色彩
   FIREWORKS_COLOR: [
     '255, 20, 97',
@@ -266,7 +266,7 @@ const BLOG = {
   // 静态彩带特效
   RIBBON: process.env.NEXT_PUBLIC_RIBBON || false, // 开关
   // 星空雨特效 黑夜模式才会生效
-  STARRY_SKY: process.env.NEXT_PUBLIC_STARRY_SKY || false, // 开关
+  STARRY_SKY: process.env.NEXT_PUBLIC_STARRY_SKY || true, // 开关
 
   //   ********挂件组件相关********
   // AI 文章摘要生成 @see https://docs_s.tianli0.top/
@@ -292,9 +292,9 @@ const BLOG = {
   WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || true, // 是否显示宠物挂件
   WIDGET_PET_LINK:
     process.env.NEXT_PUBLIC_WIDGET_PET_LINK ||
-    'https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json', // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
+    'https://cdn.jsdelivr.net/npm/live2d-widget-model-miku/assets/miku.model.json', // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
   WIDGET_PET_SWITCH_THEME:
-    process.env.NEXT_PUBLIC_WIDGET_PET_SWITCH_THEME || true, // 点击宠物挂件切换博客主题
+    process.env.NEXT_PUBLIC_WIDGET_PET_SWITCH_THEME || false, // 点击宠物挂件切换博客主题
 
   // 音乐播放插件
   MUSIC_PLAYER: process.env.NEXT_PUBLIC_MUSIC_PLAYER || false, // 是否使用音乐播放插件
