@@ -5,9 +5,9 @@ const CONFIG = {
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到我的博客', url: 'https://blog.buzzchat.top' },
-    { title: '技术是无止境的最求', url: 'https://blog.buzzchat.top/about' },
-    { title: '编码是终身学习的旅程', url: 'https://blog.buzzchat.top/about' }
+    { title: '网安技术学习内容已移动至个人学习笔记', url: 'https://docs.buzzchat.top' },
+    { title: '个人学习笔记上线啦', url: 'https://docs.buzzchat.top/about' },
+    { title: '', url: 'https://docs.buzzchat.top/about' }
   ],
 
   // 英雄区左右侧组件颠倒位置
