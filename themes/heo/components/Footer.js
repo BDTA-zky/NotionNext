@@ -1,3 +1,6 @@
+import { siteConfig } from '@/lib/config'
+import SocialButton from './SocialButton'
+
 const Footer = ({ title }) => {
   const d = new Date()
   const currentYear = d.getFullYear()
