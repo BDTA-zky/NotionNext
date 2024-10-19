@@ -23,12 +23,20 @@ const Footer = ({ title }) => {
 
       <br />
 
-      {/* 在这里增加图片 */}
-      <div id='footer-image' className='w-full h-36'>
+      {/* 在这里增加两张叠加的图片 */}
+      <div id="footer-image" className="w-full h-36 relative">
+        {/* 第一张图片，位于下方 */}
         <img 
-          src="https://p.qjq.cn/cover/202410191400532.png" 
-          alt="Footer Image" 
-          className='w-full h-full object-cover'
+          src="" 
+          alt="Footer Image 1" 
+          className="w-full h-full object-cover"
+        />
+
+        {/* 第二张图片，位于第一张图片的上方 */}
+        <img 
+          src="https://pic.imgdb.cn/item/6713caf1d29ded1a8c05a59b.jpg" 
+          alt="Footer Image 2" 
+          className="absolute top-0 left-0 w-full h-full object-cover z-10 opacity-75"
         />
       </div>
 
