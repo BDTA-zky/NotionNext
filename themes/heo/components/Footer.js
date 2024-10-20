@@ -9,7 +9,7 @@ const Footer = ({ title }) => {
     parseInt(since) < currentYear ? since + '-' + currentYear : currentYear
 
   return (
-    <footer className='relative flex-shrink-0 bg-white dark:bg-[#1a191d] justify-center text-center m-auto w-full leading-6 text-gray-600 dark:text-gray-100 text-sm'>
+    <footer className='relative flex-shrink-0 bg-white dark:bg-[#1a191d] justify-center text-center mx-auto w-full max-w-full leading-6 text-gray-600 dark:text-gray-100 text-sm'>
       {/* 颜色过度区 */}
       <div
         id='color-transition'
@@ -17,34 +17,34 @@ const Footer = ({ title }) => {
       />
 
       {/* 社交按钮 */}
-      <div className='w-full h-24'>
+      <div className='w-full h-24 flex justify-center'>
         <SocialButton />
       </div>
 
       <br />
 
       {/* 在这里增加两张叠加的图片 */}
-      <div id="footer-image" className="w-full h-36 relative">
+      <div id="footer-image" className="w-full h-36 max-w-screen-lg mx-auto relative">
         {/* 第一张图片，位于下方 */}
         <img 
           src="https://pic.imgdb.cn/item/67145b87d29ded1a8ce5f02a.png" 
           alt="Footer Image 1" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
 
-        {/* 第二张图片，位于第一张图片的上方 */}
+        {/* 第二张图片，位于第一张图片的上方，使用绝对定位和透明度 */}
         <img 
           src="https://pic.imgdb.cn/item/6713caf1d29ded1a8c05a59b.jpg" 
           alt="Footer Image 2" 
-          className="absolute top-0 left-0 w-full h-full object-cover z-10 opacity-75"
+          className="absolute top-0 left-0 w-full h-full object-contain z-10 opacity-75"
         />
       </div>
 
       {/* 底部页面信息 */}
       <div
         id='footer-bottom'
-        className='w-full h-20 flex flex-col p-3 lg:flex-row justify-between px-6 items-center bg-[#f1f3f7] dark:bg-[#21232A] border-t dark:border-t-[#3D3D3F]'>
-        <div id='footer-bottom-left'>
+        className='w-full flex flex-col lg:flex-row flex-wrap p-3 justify-between items-center px-6 bg-[#f1f3f7] dark:bg-[#21232A] border-t dark:border-t-[#3D3D3F] max-w-screen-lg mx-auto'>
+        <div id='footer-bottom-left' className='text-center lg:text-left'>
           NotionNext {siteConfig('VERSION')} <i className='fas fa-copyright' />{' '}
           {`${copyrightDate}`} <i className='mx-1 animate-pulse fas fa-heart' />{' '}
           <a
@@ -55,7 +55,7 @@ const Footer = ({ title }) => {
           .
         </div>
 
-        <div id='footer-bottom-right'>
+        <div id='footer-bottom-right' className='text-center lg:text-right'>
           {siteConfig('BEI_AN') && (
             <>
               <i className='fas fa-shield-alt' />{' '}
