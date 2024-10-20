@@ -1,8 +1,8 @@
 import SocialButton from './SocialButton'
 import { siteConfig } from '@/lib/config'
 
-// 引入你上传的动物图片
-import AnimalImage from 'https://pic.imgdb.cn/item/6713caf1d29ded1a8c05a59b.webp'
+// 图片的外部链接
+const animalImagePath = 'https://pic.imgdb.cn/item/6713caf1d29ded1a8c05a59b.webp'
 
 const Footer = ({ title }) => {
   const d = new Date()
@@ -15,7 +15,7 @@ const Footer = ({ title }) => {
       className='relative flex-shrink-0 bg-white dark:bg-[#1a191d] justify-center text-center m-auto w-full leading-6 text-gray-600 dark:text-gray-100 text-sm'
     >
 
-      {/* 颜色过度区 */}
+      {/* 颜色过渡区 */}
       <div id='color-transition' className='h-32 bg-gradient-to-b from-[#f7f9fe] to-white dark:bg-[#1a191d] dark:from-inherit dark:to-inherit'>
       </div>
 
@@ -24,18 +24,17 @@ const Footer = ({ title }) => {
         <SocialButton />
       </div>
 
-      {/* 动物图片区域 */}
+      {/* 动物图片区域，使用外部链接 */}
       <div id="footer-image" className='relative flex justify-center'>
         <img
-          src={AnimalImage}
+          src={animalImagePath}  // 使用外部链接
           alt='Footer Animals'
-          className='absolute w-full max-w-screen-md object-contain bottom-[-20px] z-10'
-          style={{ maxHeight: '200px' }}
+          className='absolute w-full max-w-[600px] object-contain -bottom-8 z-10'
         />
       </div>
 
       {/* 底部页面信息 */}
-      <div id='footer-bottom' className='w-full h-20 flex flex-col p-3 lg:flex-row justify-between px-6 items-center bg-[#f1f3f7] dark:bg-[#30343f]'>
+      <div id='footer-bottom' className='w-full h-20 flex flex-col p-3 lg:flex-row justify-between px-6 items-center bg-gradient-to-r from-pink-500 to-red-500 dark:bg-[#30343f]'>
 
         <div id='footer-bottom-left'>
           NotionNext {siteConfig('VERSION')} <i className='fas fa-copyright' /> {`${copyrightDate}`} <i className='mx-1 animate-pulse fas fa-heart' /> <a href={siteConfig('LINK')} className='underline font-bold dark:text-gray-300'>{siteConfig('AUTHOR')}</a>.
@@ -50,7 +49,6 @@ const Footer = ({ title }) => {
           <span className='pl-2 hidden busuanzi_container_site_uv'>
             <i className='fas fa-users' /> <span className='px-1 busuanzi_value_site_uv'> </span>
           </span>
-
         </div>
       </div>
     </footer>
