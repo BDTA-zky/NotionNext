@@ -27,7 +27,7 @@ const Footer = ({ title }) => {
       <div id="footer-image" className="w-full h-36 relative">
         {/* 第一张图片，位于下方 */}
         <img 
-          src="" 
+          src="https://pic.imgdb.cn/item/67145b87d29ded1a8ce5f02a.png" 
           alt="Footer Image 1" 
           className="w-full h-full object-cover"
         />
