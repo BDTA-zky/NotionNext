@@ -23,20 +23,20 @@ const Footer = ({ title }) => {
 
       <br />
 
-      {/* 在这里增加两张叠加的图片 */}
+      {/* 石头墙和动物的叠加图片 */}
       <div id="footer-image" className="w-full h-36 max-w-screen-lg mx-auto relative">
-        {/* 第一张图片，位于下方 */}
+        {/* 石头墙图片，位于底部 */}
         <img 
           src="https://pic.imgdb.cn/item/67145b87d29ded1a8ce5f02a.png" 
-          alt="Footer Image 1" 
-          className="w-full h-full object-contain"
+          alt="Footer Stone Wall" 
+          className="w-full object-contain"
         />
 
-        {/* 第二张图片，位于第一张图片的上方，使用绝对定位和透明度 */}
+        {/* 动物图片，位于石头墙之上 */}
         <img 
-          src="https://pic.imgdb.cn/item/6713caf1d29ded1a8c05a59b.jpg" 
-          alt="Footer Image 2" 
-          className="absolute top-0 left-0 w-full h-full object-contain z-10 opacity-75"
+          src="https://pic.imgdb.cn/item/6713caf1d29ded1a8c05a59b.webp" 
+          alt="Footer Animals" 
+          className="absolute top-[-40px] left-0 w-full h-full object-contain z-10"
         />
       </div>
 
