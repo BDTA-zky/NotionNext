@@ -29,7 +29,7 @@ const Footer = ({ title }) => {
         <img
           src={animalImagePath}  // 使用外部链接
           alt='Footer Animals'
-          className='absolute w-full max-w-[600px] object-contain -bottom-8 z-10'
+          className='absolute w-full max-w-[600px] object-contain -bottom-12 z-10'  // 修改 -bottom-8 为 -bottom-12
         />
       </div>
 
